@@ -1,374 +1,260 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV | Pedro González</title>
-    <style>
-      :root {
-        --bg: #f4f7fb;
-        --surface: #ffffff;
-        --text: #1f2937;
-        --muted: #6b7280;
-        --primary: #2563eb;
-        --border: #e5e7eb;
-        --chip: #eff6ff;
-      }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+        <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-      body {
-        font-family: "Segoe UI", Roboto, Arial, sans-serif;
-        background: linear-gradient(145deg, #eef4ff 0%, var(--bg) 55%, #ffffff 100%);
-        color: var(--text);
-        line-height: 1.6;
-        padding: 32px 16px;
-      }
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-      .container {
-        max-width: 980px;
-        margin: 0 auto;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        box-shadow: 0 12px 34px rgba(37, 99, 235, 0.08);
-        overflow: hidden;
-      }
+        <title>Pedro Gonzalez</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Pedro González</a>
+                </div>
 
-      .hero {
-        background: radial-gradient(circle at top right, #60a5fa 0%, #2563eb 45%, #1d4ed8 100%);
-        color: #fff;
-        padding: 36px;
-      }
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Acerca de</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Experiencia</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+                    </ul>
+                </div>
 
-      .hero-inner {
-        display: flex;
-        align-items: flex-start;
-        gap: 28px;
-        flex-wrap: wrap;
-      }
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-      .hero-photo {
-        flex-shrink: 0;
-      }
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hola,<br>Soy <span class="home__title-color">Pedro González</span><br>Backend Developer</h1>
 
-      .hero-photo img {
-        width: 128px;
-        height: 128px;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center;
-        border: 3px solid rgba(255, 255, 255, 0.5);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-        display: block;
-        background: rgba(255, 255, 255, 0.15);
-      }
+                    <a href="#contact" class="button">Contacto</a>
+                </div>
 
-      .hero-text {
-        flex: 1;
-        min-width: 220px;
-      }
+                <div class="home__social">
+                    <a target="_blank" href="https://www.linkedin.com/in/pedro-gzvargas" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a target="_blank" href="https://github.com/pedrogzvargas" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
 
-      .hero h1 {
-        font-size: 2rem;
-        font-weight: 700;
-      }
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="100" href="assets/img/perfil.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
 
-      .hero p {
-        margin-top: 6px;
-        opacity: 0.95;
-      }
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">Acerca de</h2>
 
-      .contact {
-        margin-top: 18px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        font-size: 0.95rem;
-      }
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/perfil.jpeg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">Soy Pedro González</h2>
+                        <p class="about__text">
+                            Desarrollador backend especializado en Python con más de 5 años de experiencia en el diseño y desarrollo de APIs y sistemas escalables. He trabajado con los principales frameworks del ecosistema, así como con diversos servicios en entornos cloud.
+                            <br>
+                            <br>
+                            En los últimos años, me he enfocado en el sector financiero, desarrollando soluciones críticas con altos estándares de rendimiento, seguridad y disponibilidad. Recientemente, he comenzado a especializarme en el desarrollo de soluciones con inteligencia artificial, participando en la integración de modelos GPT en proyectos reales para la automatización de procesos.
+                        </p>           
+                    </div>                                   
+                </div>
+            </section>
 
-      .contact span,
-      .contact a {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        background: rgba(255, 255, 255, 0.16);
-        padding: 6px 12px;
-        border-radius: 999px;
-      }
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Habilidades</h2>
 
-      .contact-icon {
-        width: 1.05em;
-        height: 1.05em;
-        flex-shrink: 0;
-        fill: currentColor;
-      }
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <p class="skills__text">Tecnologías y herramientas con las que trabajo en el desarrollo de APIs, sistemas escalables y soluciones en la nube.</p>
+                        <ul class="skills__list">
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Python</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">FastAPI</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Flask</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Django</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">ReactJS</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">TS</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">PostgreSQL</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Redis</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">RabbitMQ</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Kafka</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Docker</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Docker Compose</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.simpleicons.org/langgraph/1C3C3C" alt="" class="skills__logo">
+                                <span class="skills__name">LangGraph</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" class="skills__logo">
+                                <span class="skills__name">Git</span>
+                            </li>
+                            <li class="skills__item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" class="skills__logo">
+                                <span class="skills__name">AWS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
 
-      .contact a {
-        color: inherit;
-        text-decoration: none;
-      }
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Experiencia</h2>
 
-      .contact a:hover {
-        background: rgba(255, 255, 255, 0.28);
-      }
+                <div class="work__container bd-grid">
+                    <article class="work__item">
+                        <h3 class="work__title">Desarrollador Backend Python - Coderio</h3>
+                        <p class="work__date">Oct 2024 - Mar 2026</p>
+                        <ul class="work__list">
+                            <li>Participé en el desarrollo de un sistema de créditos enfocado en la recolección, validación de información y documentación, integrando APIs basadas en modelos de OpenAI (ChatGPT) y orquestando flujos mediante LangGraph para automatizar procesos y mejorar la eficiencia operativa.</li>
+                            <li>Brindé soporte y optimización a funciones serverless (AWS Lambda), mejorando su rendimiento y mantenimiento.</li>
+                            <li>Implementé nuevas versiones de APIs para clientes de Coderio utilizando FastAPI, asegurando escalabilidad y buenas prácticas.</li>
+                            <li>Desarrollé la generación de estados de cuenta mediante ReportLab, automatizando procesos de documentación financiera.</li>
+                            <li>Diseñé e implementé un sistema de procesamiento de dispersiones utilizando colas SQS de AWS para garantizar procesamiento asíncrono y resiliente.</li>
+                            <li>Desarrollé un sistema para la gestión de tarjetahabientes (cardholders) y tarjetas (cards) integrando la plataforma Airwallex.</li>
+                        </ul>
+                    </article>
 
-      .content {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 28px;
-        padding: 30px;
-      }
+                    <div class="work__container bd-grid">
+                        <article class="work__item">
+                            <h3 class="work__title">Desarrollador Backend Python - Columbus de México</h3>
+                            <p class="work__date">Sep 2020 - Ene 2024</p>
+                            <ul class="work__list">
+                                <li>Formé parte del equipo de desarrollo de una plataforma de inversiones y ahorro personal, construida con Flask bajo una arquitectura hexagonal. <br> <br> Durante el desarrollo se implementó comunicación asíncrona mediante RabbitMQ y Kombu para la creación de publicadores y consumidores de eventos, contribuyendo a una arquitectura desacoplada y escalable.</li>
+                                <li>Integré el servicio de Kuspit dentro del sistema, habilitando funcionalidades clave para operaciones de inversión.</li>
+                                <li>Lideré la integración, mantenimiento y soporte del servicio de Kuspit dentro de la plataforma, incluyendo la incorporación de nuevas funcionalidades.</li>
+                                <li>Desarrollé un sistema interno basado en SEPOMEX para la gestión de direcciones.</li>
+                                <li>Implementé un módulo de notificaciones push utilizando Firebase Cloud Messaging.</li>
+                                <li>Brindé soporte y mantenimiento a la primera versión del sistema de inversiones y ahorro, asegurando su estabilidad operativa.</li>
+                                <li>Participé en capacitación técnica para el desarrollo de proyectos en Java con Spring Boot.</li>
+                            </ul>
+                        </article>
+                    </div>
 
-      h2 {
-        color: #0f172a;
-        font-size: 1.15rem;
-        margin-bottom: 12px;
-        border-left: 4px solid var(--primary);
-        padding-left: 10px;
-      }
+                    <div class="work__container bd-grid">
+                        <article class="work__item">
+                            <h3 class="work__title">Desarrollador Backend Python - Mobilender</h3>
+                            <p class="work__date">Dic 2018 - Sep 2020</p>
+                            <ul class="work__list">
+                                <li>Desarrollé nuevas funcionalidades para un sistema de créditos, contribuyendo a la evolución y mejora continua del producto.</li>
+                                <li>Integré servicios de buró de crédito para la validación y análisis de perfiles crediticios.</li>
+                                <li>Desarrollé un sistema interno basado en SEPOMEX para la gestión y normalización de direcciones.</li>
+                                <li>Integré el servicio de Quien es Quien para validaciones relacionadas con cumplimiento (PEP y PLD).</li>
+                                <li>Desarrollé servicios para la gestión de avales dentro del sistema de créditos.</li>
+                                <li>Realicé análisis de datos y generación de reportes utilizando Pandas.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-      section + section {
-        margin-top: 24px;
-      }
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contacto</h2>
 
-      .item {
-        margin-bottom: 16px;
-      }
+                <div class="contact__container bd-grid">
+                    <ul class="contact__list">
+                        <li class="contact__item">
+                            <i class='bx bx-envelope contact__icon'></i>
+                            <div class="contact__data">
+                                <span class="contact__label">Correo</span>
+                                <a href="mailto:pedrogzvargas@gmail.com" class="contact__link">pedro.gzvargas@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="contact__item">
+                            <i class='bx bx-phone contact__icon'></i>
+                            <div class="contact__data">
+                                <span class="contact__label">Teléfono</span>
+                                <a href="tel:+525512345678" class="contact__link">+52 7461084362</a>
+                            </div>
+                        </li>
+                        <li class="contact__item">
+                            <i class='bx bxl-linkedin contact__icon'></i>
+                            <div class="contact__data">
+                                <span class="contact__label">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/pedro-gzvargas" target="_blank" rel="noopener noreferrer" class="contact__link">linkedin.com/in/pedro-gzvargas</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
 
-      .item h3 {
-        font-size: 1rem;
-      }
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Pedro González</p>
+            <p class="footer__copy">&#169; gzvargas. All rigths reserved</p>
+        </footer>
 
-      .experience-section .meta,
-      .experience-section li {
-        text-align: justify;
-      }
 
-      .profile-section p {
-        text-align: justify;
-      }
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-      .meta {
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      ul {
-        margin-top: 8px;
-        padding-left: 18px;
-      }
-
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .skills span {
-        background: var(--chip);
-        border: 1px solid #bfdbfe;
-        color: #1e3a8a;
-        padding: 6px 10px;
-        border-radius: 10px;
-        font-size: 0.9rem;
-      }
-
-      .card {
-        background: #f8fafc;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 14px;
-        margin-bottom: 12px;
-      }
-
-      .footer {
-        border-top: 1px solid var(--border);
-        padding: 16px 30px 24px;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 820px) {
-        .content {
-          grid-template-columns: 1fr;
-          padding: 22px;
-        }
-
-        .hero {
-          padding: 24px;
-        }
-
-        .hero-inner {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-
-        .contact {
-          justify-content: center;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="container">
-      <header class="hero">
-        <div class="hero-inner">
-          <div class="hero-photo">
-            <img src="foto.png" alt="Foto de Pedro González" width="128" height="128" />
-          </div>
-          <div class="hero-text">
-            <h1>Pedro González</h1>
-            <p>Desarrollador Backend en Python con experiencia en la construcción de APIs y sistemas escalables, enfocado en soluciones del sector financiero e integración de servicios basados en inteligencia artificial.</p>
-            <div class="contact">
-              <span>
-                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-                </svg>
-                Venustiano Carranza, Puebla, México
-              </span>
-              <span href="mailto:pedro.gzvargas@gmail.com">
-                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-                </svg>
-                pedro.gzvargas@gmail.com
-              </span>
-              <span href="tel:+527461084362">
-                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/>
-                </svg>
-                +52 7461084362
-              </span>
-              <a href="https://www.linkedin.com/in/pedro-gzvargas" target="_blank" rel="noopener noreferrer">
-                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22 0H2C.9 0 0 .9 0 2v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
-                </svg>
-                LinkedIn
-              </a>
-              <a href="https://github.com/pedrogzvargas" target="_blank" rel="noopener noreferrer">
-                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 .5C5.73.5.5 5.78.5 12.04c0 5.11 3.29 9.44 7.86 10.97.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.06-.73.08-.71.08-.71 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18.91-.26 1.89-.39 2.86-.39.97 0 1.95.13 2.86.39 2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.8 1.08.8 2.18 0 1.57-.01 2.84-.01 3.22 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12.04C23.5 5.78 18.27.5 12 .5z"/>
-                </svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div class="content">
-        <div>
-          <section class="profile-section">
-            <h2>Perfil Profesional</h2>
-            <p>
-                Desarrollador backend especializado en Python con más de 5 años de experiencia en el diseño y desarrollo de APIs y sistemas escalables. He trabajado con los principales frameworks del ecosistema, así como con diversos servicios en entornos cloud.
-                <br>
-                <br>
-                En los últimos años, me he enfocado en el sector financiero, desarrollando soluciones críticas con altos estándares de rendimiento, seguridad y disponibilidad. Recientemente, he comenzado a especializarme en el desarrollo de soluciones con inteligencia artificial, participando en la integración de modelos GPT en proyectos reales para la automatización de procesos.
-            </p>
-          </section>
-
-          <section class="experience-section">
-            <h2>Experiencia</h2>
-            <article class="item">
-              <h3>Desarrollador Backend Python - Coderio</h3>
-              <p class="meta">Oct 2024 - Mar 2026</p>
-              <ul>
-                <li>Participé en el desarrollo de un sistema de créditos enfocado en la recolección, validación de información y documentación, integrando APIs basadas en modelos de OpenAI (ChatGPT) y orquestando flujos mediante LangGraph para automatizar procesos y mejorar la eficiencia operativa.</li>
-                <li>Brindé soporte y optimización a funciones serverless (AWS Lambda), mejorando su rendimiento y mantenimiento.</li>
-                <li>Implementé nuevas versiones de APIs para clientes de Coderio utilizando FastAPI, asegurando escalabilidad y buenas prácticas.</li>
-                <li>Desarrollé la generación de estados de cuenta mediante ReportLab, automatizando procesos de documentación financiera.</li>
-                <li>Diseñé e implementé un sistema de procesamiento de dispersiones utilizando colas SQS de AWS para garantizar procesamiento asíncrono y resiliente.</li>
-                <li>Desarrollé un sistema para la gestión de tarjetahabientes (cardholders) y tarjetas (cards) integrando la plataforma Airwallex.</li>
-              </ul>
-            </article>
-
-            <article class="item">
-              <h3>Desarrollador Backend Python - Columbus de México</h3>
-              <p class="meta">Sep 2020 - Ene 2024</p>
-              <ul>
-                <li>Formé parte del equipo de desarrollo de una plataforma de inversiones y ahorro personal, construida con Flask bajo una arquitectura hexagonal.</li>
-                <li>Integré el servicio de Kuspit dentro del sistema, habilitando funcionalidades clave para operaciones de inversión.</li>
-                <li>Lideré la integración, mantenimiento y soporte del servicio de Kuspit dentro de la plataforma, incluyendo la incorporación de nuevas funcionalidades.</li>
-                <li>Desarrollé un sistema interno basado en SEPOMEX para la gestión de direcciones.</li>
-                <li>Implementé un módulo de notificaciones push utilizando Firebase Cloud Messaging.</li>
-                <li>Brindé soporte y mantenimiento a la primera versión del sistema de inversiones y ahorro, asegurando su estabilidad operativa.</li>
-                <li>Participé en capacitación técnica para el desarrollo de proyectos en Java con Spring Boot.</li>
-              </ul>
-            </article>
-
-            <article class="item">
-              <h3>Desarrollador Backend Python - Mobilender</h3>
-              <p class="meta">Dic 2018 - Sep 2020</p>
-              <ul>
-                <li>Desarrollé nuevas funcionalidades para un sistema de créditos, contribuyendo a la evolución y mejora continua del producto.</li>
-                <li>Integré servicios de buró de crédito para la validación y análisis de perfiles crediticios.</li>
-                <li>Desarrollé un sistema interno basado en SEPOMEX para la gestión y normalización de direcciones.</li>
-                <li>Integré el servicio de Quien es Quien para validaciones relacionadas con cumplimiento (PEP y PLD).</li>
-                <li>Desarrollé servicios para la gestión de avales dentro del sistema de créditos.</li>
-                <li>Realicé análisis de datos y generación de reportes utilizando Pandas.</li>
-              </ul>
-            </article>
-          </section>
-        </div>
-
-        <aside>
-          <section>
-            <h2>Habilidades</h2>
-            <div class="skills">
-              <span>Python</span>
-              <span>FastAPI</span>
-              <span>Flask</span>
-              <span>Django</span>
-              <span>PostgreSQL</span>
-              <span>Redis</span>
-              <span>RabbitMQ</span>
-              <span>Kafka</span>
-              <span>Docker</span>
-              <span>Docker Compose</span>
-              <span>LangGraph</span>
-              <span>Git</span>
-            </div>
-          </section>
-
-          <section>
-            <h2>Arquitectura y SOLID</h2>
-            <div class="card">
-              <p>
-                Experiencia aplicando arquitectura hexagonal para separar dominio, infraestructura y
-                casos de uso en sistemas backend, facilitando mantenibilidad y escalabilidad.
-              </p>
-            </div>
-            <div class="card">
-              <p>
-                Implementación de principios SOLID en diseño de servicios y módulos para reducir
-                acoplamiento, mejorar pruebas unitarias y acelerar la evolución del producto.
-              </p>
-            </div>
-          </section>
-
-          <section>
-            <h2>Educación</h2>
-            <div class="card">
-              <h3>Licenciatura en Ingeniería en Sistemas</h3>
-              <p class="meta">ITSVC | 2011 - 2016</p>
-            </div>
-          </section>
-
-          <section>
-            <h2>Idiomas</h2>
-            <div class="card">
-              <p>Español - Nativo</p>
-              <p>Inglés - Intermedio</p>
-            </div>
-          </section>
-        </aside>
-      </div>
-    </main>
-  </body>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
