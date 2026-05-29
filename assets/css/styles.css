@@ -219,6 +219,11 @@ img {
 .home__blob-img {
   width: 360px;
 }
+.home__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
 /*BUTTONS*/
 .button {
@@ -232,6 +237,15 @@ img {
 }
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+}
+.button--outline {
+  background-color: transparent;
+  color: var(--first-color);
+  border: 2px solid var(--first-color);
+}
+.button--outline:hover {
+  background-color: var(--first-color);
+  color: #fff;
 }
 
 /* ===== ABOUT =====*/
@@ -248,6 +262,18 @@ img {
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
+}
+.about__cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--mb-4);
+  color: var(--first-color);
+  font-weight: var(--font-semi);
+  transition: 0.3s;
+}
+.about__cv:hover {
+  gap: 0.75rem;
 }
 
 /* ===== SKILLS =====*/
