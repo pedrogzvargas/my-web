@@ -156,6 +156,47 @@ img{
     &__logo{
         color: var(--second-color);
     }
+    &__actions{
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+    }
+    &__lang{
+        display: inline-flex;
+        align-items: center;
+        gap: .4rem;
+        color: var(--second-color);
+        font-family: var(--body-font);
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-semi);
+        background-color: hsl(var(--hue-color), 89%, 96%);
+        border: 2px solid var(--first-color);
+        border-radius: 2rem;
+        padding: .35rem .85rem .35rem .65rem;
+        cursor: pointer;
+        box-shadow: 0 2px 8px hsla(var(--hue-color), 89%, 60%, .25);
+        transition: .3s;
+
+        &-flag{
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        &-label{
+            letter-spacing: .05em;
+        }
+
+        &:hover{
+            background-color: var(--first-color);
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px hsla(var(--hue-color), 89%, 60%, .4);
+        }
+
+        &:active{
+            transform: translateY(0);
+        }
+    }
     &__toggle{
         color: var(--second-color);
         font-size: 1.5rem;
