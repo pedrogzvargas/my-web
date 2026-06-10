@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,16 +22,22 @@
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">Acerca de</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Experiencia</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+                        <li class="nav__item"><a href="#home" class="nav__link active-link" data-i18n="nav.home">Inicio</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav.about">Acerca de</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link" data-i18n="nav.skills">Habilidades</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link" data-i18n="nav.work">Experiencia</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav.contact">Contacto</a></li>
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <div class="nav__actions">
+                    <button type="button" class="nav__lang" id="lang-toggle" aria-label="Cambiar a inglés">
+                        <span class="nav__lang-flag" aria-hidden="true">🇲🇽</span>
+                        <span class="nav__lang-label">ES</span>
+                    </button>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-menu'></i>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -40,11 +46,11 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hola,<br>Soy <span class="home__title-color">Pedro González</span><br>Backend Developer</h1>
+                    <h1 class="home__title" data-i18n="home.title" data-i18n-html>Hola,<br>Soy <span class="home__title-color">Pedro González</span><br>Backend Developer</h1>
 
                     <div class="home__buttons">
-                        <a href="#contact" class="button">Contacto</a>
-                        <a href="assets/cv/PedroG.pdf" class="button button--outline" target="_blank" rel="noopener noreferrer">
+                        <a href="#contact" class="button" data-i18n="home.contact">Contacto</a>
+                        <a href="assets/cv/PedroG.pdf" class="button button--outline cv-download" data-download="Pedro-Gonzalez-CV.pdf" data-i18n="home.cv" data-i18n-html>
                             <i class='bx bx-download'></i> Descargar CV
                         </a>
                     </div>
@@ -70,7 +76,7 @@
 
             <!--===== ABOUT =====-->
             <section class="about section" id="about">
-                <h2 class="section-title">Acerca de</h2>
+                <h2 class="section-title" data-i18n="about.title">Acerca de</h2>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
@@ -78,14 +84,14 @@
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">Soy Pedro González</h2>
-                        <p class="about__text">
+                        <h2 class="about__subtitle" data-i18n="about.subtitle">Soy Pedro González</h2>
+                        <p class="about__text" data-i18n="about.text" data-i18n-html>
                             Desarrollador backend especializado en Python con más de 5 años de experiencia en el diseño y desarrollo de APIs y sistemas escalables. He trabajado con los principales frameworks del ecosistema, así como con diversos servicios en entornos cloud.
                             <br>
                             <br>
                             En los últimos años, me he enfocado en el sector financiero, desarrollando soluciones críticas con altos estándares de rendimiento, seguridad y disponibilidad. Recientemente, he comenzado a especializarme en el desarrollo de soluciones con inteligencia artificial, participando en la integración de modelos GPT en proyectos reales para la automatización de procesos.
                         </p>
-                        <a href="assets/cv/PedroG.pdf" class="about__cv" target="_blank" rel="noopener noreferrer">
+                        <a href="assets/cv/PedroG.pdf" class="about__cv cv-download" data-download="Pedro-Gonzalez-CV.pdf" data-i18n="about.cv" data-i18n-html>
                             <i class='bx bx-download'></i> Descargar currículum (PDF)
                         </a>
                     </div>                                   
@@ -94,11 +100,11 @@
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Habilidades</h2>
+                <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
 
                 <div class="skills__container bd-grid">          
                     <div>
-                        <p class="skills__text">Tecnologías y herramientas con las que trabajo en el desarrollo de APIs, sistemas escalables y soluciones en la nube.</p>
+                        <p class="skills__text" data-i18n="skills.text">Tecnologías y herramientas con las que trabajo en el desarrollo de APIs, sistemas escalables y soluciones en la nube.</p>
                         <ul class="skills__list">
                             <li class="skills__item">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" class="skills__logo">
@@ -171,49 +177,49 @@
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Experiencia</h2>
+                <h2 class="section-title" data-i18n="work.title">Experiencia</h2>
 
                 <div class="work__container bd-grid">
                     <article class="work__item">
-                        <h3 class="work__title">Desarrollador Backend Python - Coderio</h3>
-                        <p class="work__date">Oct 2024 - Mar 2026</p>
+                        <h3 class="work__title" data-i18n="work.coderio.title">Desarrollador Backend Python - Coderio</h3>
+                        <p class="work__date" data-i18n="work.coderio.date">Oct 2024 - Mar 2026</p>
                         <ul class="work__list">
-                            <li>Participé en el desarrollo de un sistema de créditos enfocado en la recolección, validación de información y documentación, integrando APIs basadas en modelos de OpenAI (ChatGPT) y orquestando flujos mediante LangGraph para automatizar procesos y mejorar la eficiencia operativa.</li>
-                            <li>Brindé soporte y optimización a funciones serverless (AWS Lambda), mejorando su rendimiento y mantenimiento.</li>
-                            <li>Implementé nuevas versiones de APIs para clientes de Coderio utilizando FastAPI, asegurando escalabilidad y buenas prácticas.</li>
-                            <li>Desarrollé la generación de estados de cuenta mediante ReportLab, automatizando procesos de documentación financiera.</li>
-                            <li>Diseñé e implementé un sistema de procesamiento de dispersiones utilizando colas SQS de AWS para garantizar procesamiento asíncrono y resiliente.</li>
-                            <li>Desarrollé un sistema para la gestión de tarjetahabientes (cardholders) y tarjetas (cards) integrando la plataforma Airwallex.</li>
+                            <li data-i18n="work.coderio.1">Participé en el desarrollo de un sistema de créditos enfocado en la recolección, validación de información y documentación, integrando APIs basadas en modelos de OpenAI (ChatGPT) y orquestando flujos mediante LangGraph para automatizar procesos y mejorar la eficiencia operativa.</li>
+                            <li data-i18n="work.coderio.2">Brindé soporte y optimización a funciones serverless (AWS Lambda), mejorando su rendimiento y mantenimiento.</li>
+                            <li data-i18n="work.coderio.3">Implementé nuevas versiones de APIs para clientes de Coderio utilizando FastAPI, asegurando escalabilidad y buenas prácticas.</li>
+                            <li data-i18n="work.coderio.4">Desarrollé la generación de estados de cuenta mediante ReportLab, automatizando procesos de documentación financiera.</li>
+                            <li data-i18n="work.coderio.5">Diseñé e implementé un sistema de procesamiento de dispersiones utilizando colas SQS de AWS para garantizar procesamiento asíncrono y resiliente.</li>
+                            <li data-i18n="work.coderio.6">Desarrollé un sistema para la gestión de tarjetahabientes (cardholders) y tarjetas (cards) integrando la plataforma Airwallex.</li>
                         </ul>
                     </article>
 
                     <div class="work__container bd-grid">
                         <article class="work__item">
-                            <h3 class="work__title">Desarrollador Backend Python - Columbus de México</h3>
-                            <p class="work__date">Sep 2020 - Ene 2024</p>
+                            <h3 class="work__title" data-i18n="work.columbus.title">Desarrollador Backend Python - Columbus de México</h3>
+                            <p class="work__date" data-i18n="work.columbus.date">Sep 2020 - Ene 2024</p>
                             <ul class="work__list">
-                                <li>Formé parte del equipo de desarrollo de una plataforma de inversiones y ahorro personal, construida con Flask bajo una arquitectura hexagonal. <br> <br> Durante el desarrollo se implementó comunicación asíncrona mediante RabbitMQ y Kombu para la creación de publicadores y consumidores de eventos, contribuyendo a una arquitectura desacoplada y escalable.</li>
-                                <li>Integré el servicio de Kuspit dentro del sistema, habilitando funcionalidades clave para operaciones de inversión.</li>
-                                <li>Lideré la integración, mantenimiento y soporte del servicio de Kuspit dentro de la plataforma, incluyendo la incorporación de nuevas funcionalidades.</li>
-                                <li>Desarrollé un sistema interno basado en SEPOMEX para la gestión de direcciones.</li>
-                                <li>Implementé un módulo de notificaciones push utilizando Firebase Cloud Messaging.</li>
-                                <li>Brindé soporte y mantenimiento a la primera versión del sistema de inversiones y ahorro, asegurando su estabilidad operativa.</li>
-                                <li>Participé en capacitación técnica para el desarrollo de proyectos en Java con Spring Boot.</li>
+                                <li data-i18n="work.columbus.1" data-i18n-html>Formé parte del equipo de desarrollo de una plataforma de inversiones y ahorro personal, construida con Flask bajo una arquitectura hexagonal. <br> <br> Durante el desarrollo se implementó comunicación asíncrona mediante RabbitMQ y Kombu para la creación de publicadores y consumidores de eventos, contribuyendo a una arquitectura desacoplada y escalable.</li>
+                                <li data-i18n="work.columbus.2">Integré el servicio de Kuspit dentro del sistema, habilitando funcionalidades clave para operaciones de inversión.</li>
+                                <li data-i18n="work.columbus.3">Lideré la integración, mantenimiento y soporte del servicio de Kuspit dentro de la plataforma, incluyendo la incorporación de nuevas funcionalidades.</li>
+                                <li data-i18n="work.columbus.4">Desarrollé un sistema interno basado en SEPOMEX para la gestión de direcciones.</li>
+                                <li data-i18n="work.columbus.5">Implementé un módulo de notificaciones push utilizando Firebase Cloud Messaging.</li>
+                                <li data-i18n="work.columbus.6">Brindé soporte y mantenimiento a la primera versión del sistema de inversiones y ahorro, asegurando su estabilidad operativa.</li>
+                                <li data-i18n="work.columbus.7">Participé en capacitación técnica para el desarrollo de proyectos en Java con Spring Boot.</li>
                             </ul>
                         </article>
                     </div>
 
                     <div class="work__container bd-grid">
                         <article class="work__item">
-                            <h3 class="work__title">Desarrollador Backend Python - Mobilender</h3>
-                            <p class="work__date">Dic 2018 - Sep 2020</p>
+                            <h3 class="work__title" data-i18n="work.mobilender.title">Desarrollador Backend Python - Mobilender</h3>
+                            <p class="work__date" data-i18n="work.mobilender.date">Dic 2018 - Sep 2020</p>
                             <ul class="work__list">
-                                <li>Desarrollé nuevas funcionalidades para un sistema de créditos, contribuyendo a la evolución y mejora continua del producto.</li>
-                                <li>Integré servicios de buró de crédito para la validación y análisis de perfiles crediticios.</li>
-                                <li>Desarrollé un sistema interno basado en SEPOMEX para la gestión y normalización de direcciones.</li>
-                                <li>Integré el servicio de Quien es Quien para validaciones relacionadas con cumplimiento (PEP y PLD).</li>
-                                <li>Desarrollé servicios para la gestión de avales dentro del sistema de créditos.</li>
-                                <li>Realicé análisis de datos y generación de reportes utilizando Pandas.</li>
+                                <li data-i18n="work.mobilender.1">Desarrollé nuevas funcionalidades para un sistema de créditos, contribuyendo a la evolución y mejora continua del producto.</li>
+                                <li data-i18n="work.mobilender.2">Integré servicios de buró de crédito para la validación y análisis de perfiles crediticios.</li>
+                                <li data-i18n="work.mobilender.3">Desarrollé un sistema interno basado en SEPOMEX para la gestión y normalización de direcciones.</li>
+                                <li data-i18n="work.mobilender.4">Integré el servicio de Quien es Quien para validaciones relacionadas con cumplimiento (PEP y PLD).</li>
+                                <li data-i18n="work.mobilender.5">Desarrollé servicios para la gestión de avales dentro del sistema de créditos.</li>
+                                <li data-i18n="work.mobilender.6">Realicé análisis de datos y generación de reportes utilizando Pandas.</li>
                             </ul>
                         </article>
                     </div>
@@ -222,21 +228,21 @@
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Contacto</h2>
+                <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
 
                 <div class="contact__container bd-grid">
                     <ul class="contact__list">
                         <li class="contact__item">
                             <i class='bx bx-envelope contact__icon'></i>
                             <div class="contact__data">
-                                <span class="contact__label">Correo</span>
+                                <span class="contact__label" data-i18n="contact.email">Correo</span>
                                 <a href="mailto:pedrogzvargas@gmail.com" class="contact__link">pedro.gzvargas@gmail.com</a>
                             </div>
                         </li>
                         <li class="contact__item">
                             <i class='bx bx-phone contact__icon'></i>
                             <div class="contact__data">
-                                <span class="contact__label">Teléfono</span>
+                                <span class="contact__label" data-i18n="contact.phone">Teléfono</span>
                                 <a href="tel:+525512345678" class="contact__link">+52 7461084362</a>
                             </div>
                         </li>
@@ -255,7 +261,7 @@
         <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">Pedro González</p>
-            <p class="footer__copy">&#169; gzvargas. All rigths reserved</p>
+            <p class="footer__copy" data-i18n="footer.copy">&#169; gzvargas. All rigths reserved</p>
         </footer>
 
 
