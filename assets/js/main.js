@@ -99,7 +99,20 @@ const getBrowserLang = () => {
     return browserLang.startsWith('es') ? 'es' : 'en'
 }
 
+const cvFiles = {
+    es: { path: 'assets/cv/PedroG.pdf', filename: 'Pedro-Gonzalez-CV.pdf' },
+    en: { path: 'assets/cv/PedroG-en.pdf', filename: 'Pedro-Gonzalez-CV-en.pdf' }
+}
+
 let currentLang = localStorage.getItem('lang') || getBrowserLang()
+
+const updateCVDownloads = (lang) => {
+    const { path, filename } = cvFiles[lang]
+    document.querySelectorAll('.cv-download').forEach(link => {
+        link.setAttribute('href', path)
+        link.setAttribute('data-download', filename)
+    })
+}
 
 const setLanguage = (lang) => {
     currentLang = lang
@@ -128,6 +141,8 @@ const setLanguage = (lang) => {
         langToggle.querySelector('.nav__lang-label').textContent = target.label
         langToggle.setAttribute('aria-label', target.aria)
     }
+
+    updateCVDownloads(lang)
 }
 
 const langToggle = document.getElementById('lang-toggle')
@@ -169,20 +184,19 @@ document.querySelectorAll('.cv-download').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault()
 
-        const url = link.getAttribute('href')
-        const filename = link.getAttribute('data-download')
+        const { path, filename } = cvFiles[currentLang]
 
-        downloadCV(url, filename).catch(async () => {
+        downloadCV(path, filename).catch(async () => {
             if (window.location.protocol === 'file:') {
                 try {
-                    await downloadCV(`http://localhost:8000/${url}`, filename)
+                    await downloadCV(`http://localhost:8000/${path}`, filename)
                 } catch {
                     console.warn('Para descargar el CV en local, ejecuta: python3 serve.py')
                 }
                 return
             }
 
-            triggerDownload(new URL(url, window.location.href).href, filename)
+            triggerDownload(new URL(path, window.location.href).href, filename)
         })
     })
 })
